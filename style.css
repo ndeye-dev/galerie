@@ -149,10 +149,9 @@ input[type=text]{
     stop-color: gray;
     border-radius: 20px;
     width: 55%;
-    padding: 7%;
+    padding: 10%;
     font-size: 10px;
     outline: none;
-    padding: 10px;
 }
 i{
     position: absolute;
@@ -176,7 +175,7 @@ i{
 }
 .page-image .groupe img{
     border-radius: 29px;
-    height: 250px;
+    height: 308px;
 }
 button{
     background-color: rgba(128, 128, 128, 0.678);
@@ -194,16 +193,26 @@ h4, .A, .butt{
    color: white; 
 }
 .page-image{
-    animation-name: image;
-    animation-duration: 7s;
-    animation-iteration-count: infinite ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10PX;
+    animation-iteration-count: infinite;
+    animation: image 12s linear infinite;
+    
+}
+.groupe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 @keyframes image{
-    0%{transform: translateX(0) ;}
-    25%{transform: translateX(-300PX);}
-    50%{transform: translateX(-1200PX);}
-    75%{transform: translateX(-1920PX);}
-    100%{transform: translateX(0);}
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translatex(-100%);
+    }
 }
 .class{
     text-align: center;
@@ -214,6 +223,10 @@ h4, .A, .butt{
 }
 .mes-photos{
     position: relative;
+    
+}
+.jpeg{
+    width: 250px;
 }
 .hover{
     position: absolute;
@@ -237,6 +250,8 @@ h4, .A, .butt{
     padding: 16px;
     margin-left: 45%;
     margin-right: 10%;
+    margin-top: 5%;
+    margin-bottom: 10%;
     font-size: 11px;
 }
 .blanc:hover{
@@ -286,8 +301,11 @@ span{
 }
 .footer{
     display: flex;
-    padding: 3%;
-    gap: 50PX;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5%;
+    padding-bottom: 10%;
+    gap: 5%;
 }
 .bas{
     color: black;
@@ -334,13 +352,71 @@ span{
 .bloc-paragraphe span{
     color: greenyellow;
 }
-input[type=submit] {
-    margin-top: 20px;
-    color: white;
-    border: 1px solid;
-    background-color: deeppink;
-    font-size: 12px;
-    padding: 9px;
-    width: 100%;
+.bottom{
+    display: flex;
+    align-items: center;
+    gap: 15%;
+    justify-content: space-around;
+    margin-bottom: 7%;
+}
+li{
+    list-style: none;
+}
+.lien-ul{
+    display: flex;
+    color: gray;
+    gap: 20PX;
+}
+.top{
+    display: flex;
+    color: gray;
+    gap: 20PX;
+}
+@media screen and (max-width:1000px) {
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+    }
+    nav{
+        display: none;
+    }
+    h2{
+        width: 80%;
+        margin-left: 10%;
+        padding: 4%;
+    }
+    .button{
+        padding: 19px;
+        margin-left: 40%;
+        margin-right: 5%;
+    }
+    .button1, .button2{
+        width: 40%;
+        padding: 7%;
+       
+    }
+    .button2{
+        padding: 5%;
+    }
+    .fond{
+        padding: 10%;
+        width: 100%;
+    }
+    .bottom{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 12px;
+    }
+    .footer{
+        display: flex;
+        flex-direction: column;
 
+    }
+    .FOOT{
+        display: flex;
+    }
+    .logo{
+        
+    }
 }
